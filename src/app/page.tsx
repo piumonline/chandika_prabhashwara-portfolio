@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import ProjectSection from "@/components/ProjectSection";
 import RecentWork from "@/components/RecentWork";
 import TextMaskSection from "@/components/TextMaskSection";
+import WorkExperience from "@/components/WorkExperience";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ProjectSection />
       <RecentWork />
       <CreativeHeading />
+      <WorkExperience />
     </main>
   );
 }
