@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import CreativeHeading from "@/components/CreativeHeading";
 import ExpertiseSection from "@/components/ExpertiseSection";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import ProjectSection from "@/components/ProjectSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <RecentWork />
       <CreativeHeading />
       <WorkExperience />
+      <Footer />
     </main>
   );
 }
