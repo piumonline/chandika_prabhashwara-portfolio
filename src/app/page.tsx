@@ -2,6 +2,7 @@ import About from "@/components/About";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import ProjectSection from "@/components/ProjectSection";
 import TextMaskSection from "@/components/TextMaskSection";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <TextMaskSection />
       <ExpertiseSection />
+      <ProjectSection />
     </main>
   );
 }
