@@ -4,14 +4,16 @@ function Navbar() {
   return (
     <div>
       {/* Navbar */}
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-5 border-b border-gray-300 z-50 bg-[#fdfaf6]">
-        <h1 className="text-2xl font-bold">CP</h1>
-        <ul className="flex space-x-8 text-gray-700">
-          <li className="cursor-pointer hover:text-black">About</li>
-          <li className="cursor-pointer hover:text-black">Project</li>
-          <li className="cursor-pointer hover:text-black">Contact</li>
+      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-[8%] py-[1rem] border-b border-gray-300 border-dashed z-50 bg-[#F7F0EC] text-gray-dark">
+        <h1 className=" lg:text-7xl font-normal font-monalista">
+          CP
+        </h1>
+        <ul className="flex space-x-[5.8125rem] text-xl text-[#2B2826] font-light">
+          <li className="cursor-pointer hover:font-semibold">About</li>
+          <li className="cursor-pointer hover:font-semibold">Project</li>
+          <li className="cursor-pointer hover:font-semibold">Contact</li>
         </ul>
-        <button className="border border-gray-700 px-4 py-2 rounded-md hover:bg-gray-100">
+        <button className="border border-dashed border-gray-dark py-4 px-8 text-xl font-light">
           Download CV
         </button>
       </nav>
