@@ -22,6 +22,7 @@ const config: Config = {
         "8xl": "6.25rem",
         "9xl": "9rem",
         "10xl": "8rem", // 128px
+        "11xl": "10rem", // 128px
       },
       colors: {
         "orange-theme": "#FF7A29",

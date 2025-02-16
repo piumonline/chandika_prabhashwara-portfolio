@@ -1,7 +1,7 @@
 export default function Hero() {
   const gridItems = Array(6).fill(null);
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center  overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden border-b border-gray-300 border-dashed">
       {/* Dotted Grid 6 columns */}
       <div className="absolute inset-0 w-[127%] left-[-13%] grid grid-cols-6 border-gray-300 border-dashed">
         {gridItems.map((_, index) => (

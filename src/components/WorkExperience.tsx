@@ -1,12 +1,12 @@
 const WorkExperience = () => {
     return (
-      <section className="w-full bg-pink-50">
+      <section className="w-full">
         {/* Top border */}
         <div className="border-t border-gray-200"></div>
         
         {/* Heading */}
         <div className="container mx-auto px-8 py-12">
-          <h2 className="text-5xl font-serif">Work Experience</h2>
+          <h2 className=" text-7xl font-monalista">Work Experience</h2>
         </div>
         
         {/* Experience Card */}
@@ -27,9 +27,9 @@ const WorkExperience = () => {
             </div>
             
             {/* Right Content Section */}
-            <div className="w-1/2 bg-white p-12">
+            <div className="w-1/2 p-12">
               <div className="max-w-xl">
-                <h3 className="text-4xl font-serif mb-4">Work Title</h3>
+                <h3 className="text-4xl font-monalista mb-4">Work Title</h3>
                 <p className="text-gray-600 mb-8">Jan-2020 - June 2024</p>
                 
                 <div className="space-y-6 text-gray-600 leading-relaxed">

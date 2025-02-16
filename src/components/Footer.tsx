@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="relative w-full bg-pink-50">
+    <footer className="relative w-full">
       {/* Top border */}
       <div className="border-t border-gray-200"></div>
 
@@ -16,8 +16,8 @@ const Footer = () => {
       </div>
 
       {/* Footer content */}
-      <div className="container mx-auto px-4 py-8 relative h-[250px]">
-        <div className="flex justify-between items-center">
+      <div className=" flex justify-center items-start mx-auto px-4 py-8 relative h-[450px]">
+        <div className="container flex justify-between items-center">
           <p className="text-gray-600">2024 All Right Reserved</p>
 
           <div className="flex gap-8">
@@ -37,19 +37,18 @@ const Footer = () => {
         </div>
 
         <div className="absolute bottom-0 left-0 w-full  overflow-hidden">
-          <div
-            className="w-full text-[20vw] font-serif leading-none tracking-tight text-black whitespace-nowrap"
+          <h1
+            className="w-full text-center text-[23vw] font-monalista leading-none relative right-[3rem] top-16"
             style={{
-              transform: "translateY(30%)",
-              fontFeatureSettings: '"kern" 1',
+              transform: "scaleY(1.5)",
+              transformOrigin: "center",
             }}
           >
             CONTACT
-          </div>
+          </h1>
         </div>
       </div>
 
-      {/* Large CONTACT text with bottom cut off */}
     </footer>
   );
 };

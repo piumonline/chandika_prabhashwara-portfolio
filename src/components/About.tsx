@@ -2,10 +2,12 @@ import React from "react";
 import Image from "next/image";
 
 function About() {
+  const gridItems = Array(6).fill(null);
+
   return (
-    <section className=" bg-[#fdfaf6]">
+    <section className="">
       {/* Main Content */}
-      <div className="flex items-center justify-center  gap-20 ">
+      <div className="flex items-center justify-center gap-20 ">
         {/* Image Section with Orange Circle */}
         <div className="">
           <div className="w-full h-full"></div>
@@ -19,9 +21,9 @@ function About() {
         </div>
 
         {/* Text Content */}
-        <div className="max-w-[600px]">
-          <h1 className="text-6xl font-bold mb-8">About</h1>
-          <p className="text-gray-700 leading-relaxed">
+        <div className="max-w-[37.5rem]">
+          <h1 className=" text-7xl font-normal mb-[4.375rem] font-monalista">About</h1>
+          <p className="text-gray-700 leading-relaxed text-justify text-xl font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -37,16 +39,18 @@ function About() {
       </div>
 
       {/* Tools Section */}
-      <div className="grid grid-cols-4 border-t border-gray-300">
-        {[1, 2, 3, 4].map((item) => (
+      <div className="grid grid-cols-4 border-y border-gray-300 border-dashed">
+        {[1, 2, 3, 4,].map((item) => (
           <div
             key={item}
-            className="text-center py-6 border-r border-gray-300 last:border-r-0"
+            className="text-center py-[1.875rem] border-r border-gray-300 last:border-r-0"
           >
-            <h3 className="text-xl font-medium">Tool</h3>
+            <h3 className=" text-2xl font-monalista font-normal">Tool</h3>
           </div>
         ))}
       </div>
+
+    
     </section>
   );
 }

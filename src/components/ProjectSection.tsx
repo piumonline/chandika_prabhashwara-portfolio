@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 const ProjectSection = () => {
     return (
-      <section className="flex w-full min-h-screen">
+      <section className="flex w-full max-h-screen">
         {/* Left Orange Section */}
-        <div className="w-1/2 bg-orange-500 p-8 relative">
+        <div className="w-1/2 bg-orange-500 px-[7rem] py-[3.75rem] relative">
           <div className="flex flex-col h-full">
             <div className="flex justify-between text-white mb-6">
               <span className="text-lg">#1</span>
@@ -10,11 +12,12 @@ const ProjectSection = () => {
             </div>
             
             {/* Image Container */}
-            <div className="relative aspect-square w-full bg-black">
-              <img 
+            <div className="relative aspect-square w-full">
+              <Image 
                 src="/projects/Rectangle 14.png"
                 alt="Abstract 3D waves"
-                className="w-full h-full object-cover"
+                className=""
+                layout="fill"
               />
             </div>
             
@@ -23,10 +26,10 @@ const ProjectSection = () => {
         </div>
   
         {/* Right Content Section */}
-        <div className="w-1/2 bg-pink-50 p-16 flex flex-col justify-center">
-          <h1 className="text-5xl font-serif mb-4">Project Title</h1>
-          <h2 className="text-2xl text-gray-700 mb-8">Work Subtitle</h2>
-          <p className="text-gray-600 leading-relaxed">
+        <div className="w-1/2 px-[8.125rem] flex flex-col justify-center">
+          <h1 className=" font-monalista text-7xl pb-[2.6875rem]">Project Title</h1>
+          <h2 className=" font-monalista text-[2rem] pb-[2.6875rem]">Work Subtitle</h2>
+          <p className="leading-relaxed text-xl font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
