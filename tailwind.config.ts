@@ -8,10 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)", "sans-serif"],
+        monalista: ["var(--font-monalista)", "cursive"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      fontSize: {
+        "5xl": "2.5rem",
+        "6xl": "2.75rem",
+        "7xl": "4rem", //64px
+        "8xl": "6.25rem",
+        "9xl": "9rem",
+        "10xl": "8rem", // 128px
+      },
+      colors: {
+        "orange-theme": "#FF7A29",
+        "gray-dark": "#2B2826",
       },
     },
   },
