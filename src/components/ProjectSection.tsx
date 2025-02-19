@@ -8,7 +8,7 @@ const ProjectSection = () => {
 
         {/* Left Orange Section */}
         <div className="w-1/2 bg-orange-theme px-[7rem] py-[2.2rem] relative border-dashed border-border-gray-dark border-r">
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col h-full px-10">
             <div className="flex justify-between mb-[2.35rem] font-light text-xl">
               <span className="text-lg">#1</span>
               <span className="text-lg">Work</span>

@@ -17,7 +17,7 @@ const config: Config = {
       },
       fontSize: {
         "5xl": "2.5rem",
-        "6xl": "2.75rem",
+        "6xl": "3rem",  //48px
         "7xl": "4rem", //64px
         "8xl": "6.25rem",
         "9xl": "9rem",
@@ -28,7 +28,6 @@ const config: Config = {
         "orange-theme": "#FF7A29",
         "gray-dark": "#2B2826",
         "border-gray-dark": "#2B28264D",
-
       },
     },
   },

@@ -2,13 +2,13 @@ const Footer = () => {
   return (
     <footer className="relative w-full">
       {/* Top border */}
-      <div className="border-t border-gray-200"></div>
+      <div className="border-t border-border-gray-dark border-dashed"></div>
 
       {/* Main contact section */}
-      <div className="bg-orange-500 py-20">
+      <div className="bg-orange-theme py-20 mx-[150px]">
         <div className="container mx-auto text-center px-4">
           <p className="text-black/70 mb-4">Make Contact, Make Impact</p>
-          <h2 className="text-5xl font-serif mb-8">Lets Connect</h2>
+          <h2 className="text-7xl font-monalista mb-8">Lets Connect</h2>
           <button className="border border-black px-8 py-3 text-black hover:bg-black hover:text-orange-500 transition-colors">
             Click To Connect
           </button>
@@ -16,7 +16,7 @@ const Footer = () => {
       </div>
 
       {/* Footer content */}
-      <div className=" flex justify-center items-start mx-auto px-4 py-8 relative h-[450px]">
+      <div className=" flex justify-center items-start mx-auto px-4 py-8 relative h-[450px] border-t border-border-gray-dark border-dashed ">
         <div className="container flex justify-between items-center">
           <p className="text-gray-600">2024 All Right Reserved</p>
 
@@ -48,7 +48,6 @@ const Footer = () => {
           </h1>
         </div>
       </div>
-
     </footer>
   );
 };
