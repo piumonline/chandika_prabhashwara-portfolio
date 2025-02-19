@@ -6,11 +6,11 @@ const CreativeHeading = () => {
   return (
     <section className="relative flex flex-col justify-center items-center overflow-hidden">
       {/* Dotted Grid Background with exactly 6 columns */}
-      <div className="absolute inset-0 w-[120%] left-[-10%] grid grid-cols-6 border-gray-300 border-dashed">
+      <div className="absolute inset-0 w-[126%] left-[-13%] grid grid-cols-6 border-border-gray-dark border-dashed">
         {gridItems.map((_, index) => (
           <div
             key={index}
-            className="border-r border-dashed border-gray-300 h-full"
+            className="border-r border-dashed border-border-gray-dark h-full"
           />
         ))}
       </div>
@@ -36,17 +36,17 @@ const CreativeHeading = () => {
         {/* Columns 3-4 - Orange Box */}
         <div className="col-span-2 flex justify-center items-center relative w-full text-center py-[9rem]">
           <div className="w-full flex justify-center items-center relative">
-            <h1 className=" text-11xl leading-tight font-monalista ">
+            <h1 className="text-11xl leading-tight font-monalista">
               <div className="mb-4">Making</div>
               <div className="relative inline-block">
-                <span className="relative z-10">C</span>
-                <div className="absolute top-0 left-[calc(1ch-0.2rem)] h-full w-[400px] bg-orange-500" />
-                <span className="relative z-10">reative</span>
+                <div className="absolute top-0 left-[calc(1ch-0.2rem)] h-full w-[26.25rem] bg-orange-theme" />
+                <span className="relative z-10 text-black">C</span>
+                <span className="relative z-10 text-white">reativ</span>
+                <span className="relative z-10 text-black">e</span>
               </div>
-              <span className=" whitespace-nowrap">
-
-              <div className="mt-4">Shits Since</div>
-              <div className="mt-4">Birth</div>
+              <span className="whitespace-nowrap">
+                <div className="mt-4">Shits Since</div>
+                <div className="mt-4">Birth</div>
               </span>
             </h1>
           </div>
@@ -59,7 +59,7 @@ const CreativeHeading = () => {
             alt="Abstract 3D waves"
             className="w-full p-[4.375rem]"
             width={180}
-              height={235}
+            height={235}
           />
         </div>
 
