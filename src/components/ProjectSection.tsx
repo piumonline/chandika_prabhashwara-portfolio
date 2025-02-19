@@ -2,17 +2,20 @@ import Image from "next/image";
 
 const ProjectSection = () => {
     return (
-      <section className="flex w-full max-h-screen">
+      <section className="flex w-full h-screen overflow-hidden relative border-b border-border-gray-dark border-dashed">
+
+        <div className="absolute border-b border-dashed border-border-gray-dark pt-[6.25rem] z-50 w-full"></div>
+
         {/* Left Orange Section */}
-        <div className="w-1/2 bg-orange-500 px-[7rem] py-[3.75rem] relative">
+        <div className="w-1/2 bg-orange-theme px-[7rem] py-[2.2rem] relative border-dashed border-border-gray-dark border-r">
           <div className="flex flex-col h-full">
-            <div className="flex justify-between text-white mb-6">
+            <div className="flex justify-between mb-[2.35rem] font-light text-xl">
               <span className="text-lg">#1</span>
               <span className="text-lg">Work</span>
             </div>
             
             {/* Image Container */}
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-square w-full h-full">
               <Image 
                 src="/projects/Rectangle 14.png"
                 alt="Abstract 3D waves"
@@ -21,7 +24,7 @@ const ProjectSection = () => {
               />
             </div>
             
-            <span className="text-white mt-4">Art</span>
+            <span className="font-light text-xl pt-[2rem]">Art</span>
           </div>
         </div>
   
@@ -38,6 +41,9 @@ const ProjectSection = () => {
             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </div>
+
+        <div className="absolute bottom-[5.65rem] border-b border-dashed border-border-gray-dark z-50 w-full"></div>
+
       </section>
     );
   };

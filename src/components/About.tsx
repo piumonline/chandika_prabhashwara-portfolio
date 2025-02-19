@@ -39,11 +39,11 @@ function About() {
       </div>
 
       {/* Tools Section */}
-      <div className="grid grid-cols-4 border-y border-gray-300 border-dashed">
+      <div className="grid grid-cols-4 border-y border-border-gray-dark border-dashed">
         {[1, 2, 3, 4,].map((item) => (
           <div
             key={item}
-            className="text-center py-[1.875rem] border-r border-gray-300 last:border-r-0"
+            className="text-center py-[1.875rem] border-r border-border-gray-dark last:border-r-0"
           >
             <h3 className=" text-2xl font-monalista font-normal">Tool</h3>
           </div>

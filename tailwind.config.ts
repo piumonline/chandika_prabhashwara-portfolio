@@ -27,6 +27,8 @@ const config: Config = {
       colors: {
         "orange-theme": "#FF7A29",
         "gray-dark": "#2B2826",
+        "border-gray-dark": "#2B28264D",
+
       },
     },
   },

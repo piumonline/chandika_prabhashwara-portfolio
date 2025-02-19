@@ -1,13 +1,13 @@
 export default function Hero() {
   const gridItems = Array(6).fill(null);
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden border-b border-gray-300 border-dashed">
+    <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden border-b border-border-gray-dark border-dashed">
       {/* Dotted Grid 6 columns */}
-      <div className="absolute inset-0 w-[127%] left-[-13%] grid grid-cols-6 border-gray-300 border-dashed">
+      <div className="absolute inset-0 w-[126%] left-[-13%] grid grid-cols-6 border-border-gray-dark border-dashed">
         {gridItems.map((_, index) => (
           <div
             key={index}
-            className="border-r border-dashed border-gray-300 h-full"
+            className="border-r border-dashed border-border-gray-dark h-full"
           />
         ))}
       </div>
@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Columns 3-4 - Orange Box */}
         <div className="col-span-2 flex justify-center items-center font-monalista">
           <div className="bg-orange-theme w-full h-[445px] mt-20 flex justify-center items-center relative mx-10">
-            <h2 className="absolute text-7xl opacity-70 top-14">
+            <h2 className="absolute text-7xl opacity-70 top-[5rem]">
               Technical Artist
             </h2>
             <h1 className="absolute text-gray-dark whitespace-nowrap lg:text-10xl font-normal">

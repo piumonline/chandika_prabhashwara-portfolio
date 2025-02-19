@@ -30,17 +30,17 @@ const ExpertiseSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center bg-[#2A2A2A] text-[#F7F0EC] overflow-hidden">
       {/* Dotted Grid Background with exactly 6 columns */}
-      <div className="absolute inset-0 w-[120%] left-[-10%] grid grid-cols-6 border-gray-300 border-dashed">
+      <div className="absolute inset-0 w-[126%] left-[-13%] grid grid-cols-6 border-[#F7F0EC4D] border-dashed">
         {gridItems.map((_, index) => (
           <div
             key={index}
-            className="border-r border-dashed border-gray-700 h-full"
+            className="border-r border-dashed border-[#F7F0EC4D] h-full"
           />
         ))}
       </div>
 
       {/* Top Border Row */}
-      <div className="w-[120%] relative border-t border-dashed border-gray-700">
+      <div className="w-[120%] relative border-t border-dashed border-[#F7F0EC4D]">
         <div className="h-20"></div>
       </div>
 
@@ -85,12 +85,13 @@ const ExpertiseSection = () => {
         ))}
 
         {/* Column 6 - Empty */}
-        <div className=""></div>
+        <div className="h-0"></div>
+        <div className="h-20"></div>
       </div>
 
       {/* Bottom Border Row */}
-      <div className="w-[120%] relative border-t border-dashed border-gray-700">
-        <div className="h-20"></div>
+      <div className="w-[120%] relative border-t border-dashed border-[#F7F0EC4D]">
+        <div className="h-0"></div>
       </div>
     </section>
   );
