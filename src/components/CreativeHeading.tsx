@@ -6,7 +6,7 @@ const CreativeHeading = () => {
   return (
     <section className="relative flex flex-col justify-center items-center overflow-hidden">
       {/* Dotted Grid Background with exactly 6 columns */}
-      <div className="absolute inset-0 w-[126%] left-[-13%] grid grid-cols-6 border-border-gray-dark border-dashed">
+      <div className="absolute inset-0 w-[123.2%] left-[-11.6%] grid grid-cols-6 border-border-gray-dark border-dashed">
         {gridItems.map((_, index) => (
           <div
             key={index}

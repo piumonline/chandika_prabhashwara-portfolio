@@ -1,11 +1,14 @@
 const Footer = () => {
+  const gridItems = Array(6).fill(null);
   return (
     <footer className="relative w-full">
       {/* Top border */}
-      <div className="border-t border-border-gray-dark border-dashed"></div>
+      <div className=" h-[8rem] border-b border-border-gray-dark border-dashed"></div>
+
+      {/* Dotted Grid 6 columns */}
 
       {/* Main contact section */}
-      <div className="bg-orange-theme py-20 mx-[150px]">
+      <div className="bg-orange-theme py-20 mx-[9.375rem] relative overflow-hidden ">
         <div className="container mx-auto text-center px-4">
           <p className="text-black/70 mb-4">Make Contact, Make Impact</p>
           <h2 className="text-7xl font-monalista mb-8">Lets Connect</h2>
@@ -13,14 +16,24 @@ const Footer = () => {
             Click To Connect
           </button>
         </div>
+        <div className="  flex flex-col justify-center items-center overflow-hidden">
+          <div className="absolute inset-0 w-[150%] left-[-24.94%] grid grid-cols-6 border-border-gray-dark border-dashed">
+            {gridItems.map((_, index) => (
+              <div
+                key={index}
+                className="border-r border-dashed border-border-gray-dark h-full"
+              />
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Footer content */}
-      <div className=" flex justify-center items-start mx-auto px-4 py-8 relative h-[450px] border-t border-border-gray-dark border-dashed ">
-        <div className="container flex justify-between items-center">
+      <div className=" flex justify-center items-start mx-auto px-4 py-8 relative h-[29rem] border-t border-border-gray-dark border-dashed  ">
+        <div className="container flex justify-between items-center  mx-[8.4rem] my-5">
           <p className="text-gray-600">2024 All Right Reserved</p>
 
-          <div className="flex gap-8">
+          <div className="flex gap-8 ">
             <a href="#" className="text-gray-600 hover:text-black">
               Behance
             </a>

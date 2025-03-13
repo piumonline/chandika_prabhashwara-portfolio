@@ -1,6 +1,6 @@
 const WorkExperience = () => {
   return (
-    <section className="w-full h-screen">
+    <section className="w-full">
       {/* Top border */}
       <div className="border-t border-border-gray-dark border-dashed"></div>
 
@@ -10,7 +10,7 @@ const WorkExperience = () => {
       </div>
 
       {/* Experience Card */}
-      <div className="border-t border-b border-dashed border-border-gray-dark">
+      <div className="border border-b border-dashed border-border-gray-dark">
         <div className="mx-[7.5rem] px-8">
           <div className="flex h-full">
 

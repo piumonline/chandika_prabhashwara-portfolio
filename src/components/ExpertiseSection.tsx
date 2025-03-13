@@ -30,7 +30,7 @@ const ExpertiseSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center bg-[#2A2A2A] text-[#F7F0EC] overflow-hidden">
       {/* Dotted Grid Background with exactly 6 columns */}
-      <div className="absolute inset-0 w-[126%] left-[-13%] grid grid-cols-6 border-[#F7F0EC4D] border-dashed">
+      <div className="absolute inset-0 w-[123.2%] left-[-11.6%] grid grid-cols-6 border-[#F7F0EC4D] border-dashed">
         {gridItems.map((_, index) => (
           <div
             key={index}

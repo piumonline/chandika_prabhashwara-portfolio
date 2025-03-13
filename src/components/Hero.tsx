@@ -3,7 +3,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden border-b border-border-gray-dark border-dashed">
       {/* Dotted Grid 6 columns */}
-      <div className="absolute inset-0 w-[126%] left-[-13%] grid grid-cols-6 border-border-gray-dark border-dashed">
+      <div className="absolute inset-0 w-[123.2%] left-[-11.6%] grid grid-cols-6 border-border-gray-dark border-dashed">
         {gridItems.map((_, index) => (
           <div
             key={index}
