@@ -8,7 +8,7 @@ const Footer = () => {
       {/* Dotted Grid 6 columns */}
 
       {/* Main contact section */}
-      <div className="bg-orange-theme py-20 mx-[9.375rem] relative overflow-hidden ">
+      <div className="bg-orange-theme py-20 mx-[9.375rem] 4k:mx-[14.2rem] relative overflow-hidden ">
         <div className="container mx-auto text-center px-4">
           <p className="text-black/70 mb-4">Make Contact, Make Impact</p>
           <h2 className="text-7xl font-monalista mb-8">Lets Connect</h2>

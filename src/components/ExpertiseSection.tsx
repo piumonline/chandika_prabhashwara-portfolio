@@ -41,7 +41,7 @@ const ExpertiseSection = () => {
 
       {/* Top Border Row */}
       <div className="w-[120%] relative border-t border-dashed border-[#F7F0EC4D]">
-        <div className="h-20"></div>
+        <div className="h-20 4k:h-40"></div>
       </div>
 
       {/* Main Content with 6 column grid */}
@@ -86,7 +86,7 @@ const ExpertiseSection = () => {
 
         {/* Column 6 - Empty */}
         <div className="h-0"></div>
-        <div className="h-20"></div>
+        <div className="h-20 4k:h-40"></div>
       </div>
 
       {/* Bottom Border Row */}

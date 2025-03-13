@@ -13,7 +13,7 @@ const RecentWork = () => {
 
       {/* Image Grid */}
       <div className=" w-full border-t border-dashed border-border-gray-dark">
-        <div className="mx-[9.625rem] h-full">
+        <div className="mx-[9.625rem] 4k:mx-[14.2rem] h-full">
           <div className="grid grid-cols-3 gap-6 h-full">
             {/* Image 1 - Astronaut */}
             <div className="overflow-hidden">

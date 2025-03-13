@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const ProjectSection = () => {
   return (
-    <section className="flex w-full h-screen overflow-hidden relative border-b border-border-gray-dark border-dashed">
-      <div className="absolute border-b border-dashed border-border-gray-dark pt-[6.25rem] z-50 w-full"></div>
+    <section className="flex w-full h-screen overflow-hidden relative border-b border-border-gray-dark border-dashed ">
+      <div className="absolute border-b border-dashed border-border-gray-dark pt-[6.25rem] z-50 w-full 4k:top-[5.9rem]"></div>
 
       {/* Left Orange Section */}
-      <div className="w-1/2 bg-orange-theme px-[7rem] py-[2.2rem] relative border-dashed border-border-gray-dark border-r">
+      <div className="w-1/2 bg-orange-theme px-[7rem] py-[2.2rem] 4k:py-[8rem] 4k:px-[11.6rem] relative border-dashed border-border-gray-dark border-r ">
         <div className="flex flex-col h-full px-10">
           <div className="flex justify-between mb-[2.35rem] font-light text-xl">
             <span className="text-lg">#1</span>
@@ -28,7 +28,7 @@ const ProjectSection = () => {
       </div>
 
       {/* Right Content Section */}
-      <div className="w-1/2 px-[8.125rem] flex flex-col justify-center">
+      <div className="w-1/2 px-[8.125rem] flex flex-col justify-center 4k:pr-[15rem]">
         <h1 className=" font-monalista text-7xl pb-[2.6875rem]">
           Project Title
         </h1>
@@ -46,7 +46,7 @@ const ProjectSection = () => {
         </p>
       </div>
 
-      <div className="absolute bottom-[5.65rem] border-b border-dashed border-border-gray-dark z-50 w-full"></div>
+      <div className="absolute bottom-[5.65rem] 4k:bottom-[11.5rem] border-b border-dashed border-border-gray-dark z-50 w-full"></div>
     </section>
   );
 };

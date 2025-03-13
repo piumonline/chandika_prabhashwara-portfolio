@@ -5,13 +5,13 @@ const WorkExperience = () => {
       <div className="border-t border-border-gray-dark border-dashed"></div>
 
       {/* Heading */}
-      <div className="container mx-auto px-8 pt-[7.5rem] pb-[2.75rem] ">
+      <div className="container mx-auto 4k:mx-[12rem] px-8 pt-[7.5rem] pb-[2.75rem] ">
         <h2 className=" text-7xl font-monalista">Work Experience</h2>
       </div>
 
       {/* Experience Card */}
       <div className="border border-b border-dashed border-border-gray-dark">
-        <div className="mx-[7.5rem] px-8">
+        <div className="mx-[7.5rem] 4k:mx-[12rem] px-8">
           <div className="flex h-full">
 
             {/* Left Company Section */}

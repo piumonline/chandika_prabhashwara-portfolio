@@ -29,6 +29,9 @@ const config: Config = {
         "gray-dark": "#2B2826",
         "border-gray-dark": "#2B28264D",
       },
+      screens: {
+        '4k': '160rem',
+      },
     },
   },
   plugins: [],
