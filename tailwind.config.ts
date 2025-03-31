@@ -31,6 +31,7 @@ const config: Config = {
       },
       screens: {
         '4k': '160rem',
+        'hd': '90rem'
       },
     },
   },

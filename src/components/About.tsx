@@ -7,7 +7,7 @@ function About() {
   return (
     <section className="">
       {/* Main Content */}
-      <div className="flex items-center justify-center gap-20 ">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-20 mx-[1.5625rem] lg:mx-0">
         {/* Image Section with Orange Circle */}
         <div className="">
           <div className="w-full h-full"></div>
