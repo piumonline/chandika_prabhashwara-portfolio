@@ -53,7 +53,7 @@ export default function Hero() {
       </div>
     </section>
 
-    <section className="relative min-h-screen flex lg:hidden flex-col justify-between overflow-hidden border-b border-border-gray-dark border-dashed bg-[#F7F0EC]">
+    <section className="relative lg:min-h-screen flex lg:hidden flex-col justify-between overflow-hidden border-b border-border-gray-dark border-dashed bg-[#F7F0EC]">
       {/* Dotted Grid Background */}
       <div className="absolute inset-0 grid grid-cols-4 border-border-gray-dark border-dashed">
         {Array(4).fill(null).map((_, index) => (
@@ -75,12 +75,12 @@ export default function Hero() {
         </div>
 
         {/* Middle Section - Orange Box */}
-        <div className="flex justify-center items-center my-12">
-          <div className="bg-[#FF7F32] w-full aspect-[4/3] flex flex-col justify-center items-center relative">
+        <div className="flex justify-center items-center my-12 font-monalista">
+          <div className="bg-[#FF7F32] max-w-[16rem]  aspect-[5/3] flex flex-col justify-center items-center relative">
             <h2 className="text-2xl opacity-70 absolute top-8 text-[#2B2826]">
               Technical Artist
             </h2>
-            <h1 className="text-5xl text-[#2B2826] font-normal font-serif mt-4">
+            <h1 className="text-6xl text-[#2B2826] font-normal mt-4 overflow-auto whitespace-nowrap">
               Game Developer
             </h1>
           </div>
@@ -88,7 +88,7 @@ export default function Hero() {
 
         {/* Bottom Section - Lorem Ipsum */}
         <div className="mt-auto mb-8">
-          <p className="text-sm text-[#2B2826] max-w-[80%] ml-auto">
+          <p className="text-sm text-[#2B2826] max-w-[48%] ml-auto">
             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
             Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
           </p>

@@ -22,7 +22,7 @@ const CreativeHeading = () => {
 
         {/* Column 2 - Name and Title */}
         <div className="pt-40 flex flex-col items-end text-start">
-          <div>
+          <div className=" lg:block hidden">
             <Image
               src="/projects/Rectangle 14.png"
               alt="Abstract 3D waves"
@@ -36,10 +36,10 @@ const CreativeHeading = () => {
         {/* Columns 3-4 - Orange Box */}
         <div className="col-span-2 flex justify-center items-center relative w-full text-center py-[9rem]">
           <div className="w-full flex justify-center items-center relative">
-            <h1 className="text-11xl leading-tight font-monalista">
+            <h1 className=" text-[4.6875rem]  lg:text-11xl leading-tight font-monalista">
               <div className="mb-4">Making</div>
               <div className="relative inline-block">
-                <div className="absolute top-0 left-[calc(1ch-0.2rem)] h-full w-[26.25rem] bg-orange-theme" />
+                <div className="absolute top-0 left-[calc(1ch-0.2rem)] h-full w-[13rem] lg:w-[26.25rem] bg-orange-theme" />
                 <span className="relative z-10 text-black">C</span>
                 <span className="relative z-10 text-white">reativ</span>
                 <span className="relative z-10 text-black">e</span>
@@ -53,7 +53,7 @@ const CreativeHeading = () => {
         </div>
 
         {/* Column 5 - Lorem Ipsum at bottom */}
-        <div className="flex flex-col justify-end pb-20">
+        <div className="lg:flex flex-col justify-end pb-20 hidden">
           <Image
             src="/projects/Rectangle 14.png"
             alt="Abstract 3D waves"

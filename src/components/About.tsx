@@ -7,9 +7,9 @@ function About() {
   return (
     <section className="">
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-20 mx-[1.5625rem] lg:mx-0">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] lg:gap-20">
         {/* Image Section with Orange Circle */}
-        <div className="">
+        <div className="border-border-gray-dark border-dashed border-b w-full lg:w-fit">
           <div className="w-full h-full"></div>
           <Image
             src="/about/Group 44.png"
@@ -21,9 +21,9 @@ function About() {
         </div>
 
         {/* Text Content */}
-        <div className="max-w-[37.5rem]">
-          <h1 className=" text-7xl font-normal mb-[4.375rem] font-monalista">About</h1>
-          <p className="text-gray-700 leading-relaxed text-justify text-xl font-light">
+        <div className="max-w-[37.5rem] mx-[1.5625rem]">
+          <h1 className=" text-[2rem] lg:text-7xl font-normal mb-[2.5rem] lg:mb-[4.375rem] font-monalista">About</h1>
+          <p className="text-gray-700 leading-relaxed text-justify text-base lg:text-xl font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
