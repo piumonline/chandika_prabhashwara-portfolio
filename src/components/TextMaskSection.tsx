@@ -21,12 +21,16 @@ const TextMaskSection = () => {
         <h1 
           className="w-full text-center text-[61vw] lg:text-[21vw] text-transparent bg-clip-text leading-none font-monalista relative right-[5rem]"
           style={{
-            backgroundImage: `url('/text bg.jpg')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+           backgroundImage: `url('/text bg.webp')`,
             WebkitBackgroundClip: 'text',
              transform: 'scaleY(1.5)',
-            transformOrigin: 'center'
+            transformOrigin: 'center',
+
+            backgroundSize: '95% 90%', 
+            backgroundPosition: '180% 170%', 
+            backgroundRepeat: 'no-repeat',
+
+            
           }}
         >
           CHANDIKA

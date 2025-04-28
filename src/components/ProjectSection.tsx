@@ -61,7 +61,7 @@ const ProjectSection = () => {
           {/* Image Container */}
           <div className="relative aspect-square w-full h-full">
             <Image
-              src="/projects/Rectangle 14.png"
+              src="/projects/project2_meta11.webp"
               alt="Abstract 3D waves"
               className=""
               layout="fill"

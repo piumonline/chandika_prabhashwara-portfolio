@@ -24,11 +24,11 @@ const CreativeHeading = () => {
         <div className="pt-40 flex flex-col items-end text-start">
           <div className=" lg:block hidden">
             <Image
-              src="/projects/Rectangle 14.png"
+              src="/recent works/work2_BW.webp"
               alt="Abstract 3D waves"
               className="w-full p-8"
               width={180}
-              height={235}
+              height={335}
             />
           </div>
         </div>
@@ -55,10 +55,10 @@ const CreativeHeading = () => {
         {/* Column 5 - Lorem Ipsum at bottom */}
         <div className="lg:flex flex-col justify-end pb-20 hidden">
           <Image
-            src="/projects/Rectangle 14.png"
+            src="/recent works/work1_BW.webp"
             alt="Abstract 3D waves"
             className="w-full p-[4.375rem]"
-            width={180}
+            width={280}
             height={235}
           />
         </div>

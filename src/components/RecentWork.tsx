@@ -82,7 +82,7 @@ const RecentWork: React.FC<RecentWorkProps> = () => {
               {/* Image 1 - Astronaut */}
               <div className="overflow-hidden">
                 <Image
-                  src="/recent works/pic1.png"
+                  src="/recent works/work3_BW.webp"
                   alt="Astronaut in black and white"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   width={477}
@@ -93,7 +93,7 @@ const RecentWork: React.FC<RecentWorkProps> = () => {
               {/* Image 2 - Abstract Waves */}
               <div className="overflow-hidden">
                 <Image
-                  src="/recent works/pic2.png"
+                  src="/recent works/work2.webp"
                   alt="Abstract wave pattern"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   width={477}
@@ -104,7 +104,7 @@ const RecentWork: React.FC<RecentWorkProps> = () => {
               {/* Image 3 - Orange Bowl */}
               <div className="overflow-hidden">
                 <Image
-                  src="/recent works/pic3.png"
+                  src="/recent works/work1_urbanOasis.webp"
                   alt="Orange objects floating above bowl"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   width={477}

@@ -9,10 +9,10 @@ function About() {
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] lg:gap-20">
         {/* Image Section with Orange Circle */}
-        <div className="border-border-gray-dark border-dashed border-b w-full lg:w-fit">
+        <div className="border-border-gray-dark border-dashed border-b w-full lg:w-fit pt-[4rem]">
           <div className="w-full h-full"></div>
           <Image
-            src="/about/Group 44.png"
+            src="/about/Group 44.webp"
             alt="Profile Image"
             width={542}
             height={639}

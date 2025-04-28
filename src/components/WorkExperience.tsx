@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface WorkExperienceProps {}
 
@@ -13,28 +14,38 @@ const WorkExperience: React.FC<WorkExperienceProps> = () => {
     const checkIfMobile = (): void => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     // Initial check
     checkIfMobile();
-    
+
     // Add event listener
     window.addEventListener("resize", checkIfMobile);
-    
+
     // Cleanup
     return (): void => window.removeEventListener("resize", checkIfMobile);
   }, []);
 
   // Slider indicator with click handlers
-  const SliderIndicator: React.FC<{total: number; current: number; onSelect: (index: number) => void}> = ({ total, current, onSelect }) => {
+  const SliderIndicator: React.FC<{
+    total: number;
+    current: number;
+    onSelect: (index: number) => void;
+  }> = ({ total, current, onSelect }) => {
     return (
       <div className="flex items-center justify-center space-x-2 mt-8 pb-4">
-        {Array(total).fill(null).map((_, idx) => (
-          <div 
-            key={idx}
-            onClick={() => onSelect(idx)}
-            className={`${idx === current ? 'bg-white w-2 h-2 rounded-full' : 'border border-gray-400 w-2 h-2 rounded-full'} cursor-pointer`}
-          />
-        ))}
+        {Array(total)
+          .fill(null)
+          .map((_, idx) => (
+            <div
+              key={idx}
+              onClick={() => onSelect(idx)}
+              className={`${
+                idx === current
+                  ? "bg-white w-2 h-2 rounded-full"
+                  : "border border-gray-400 w-2 h-2 rounded-full"
+              } cursor-pointer`}
+            />
+          ))}
       </div>
     );
   };
@@ -44,13 +55,24 @@ const WorkExperience: React.FC<WorkExperienceProps> = () => {
   };
 
   return (
-    <section className="w-full bg-[#2B2826] lg:bg-[#F7F0EC] text-white lg:text-black" data-testid="work-experience-section">
+    <section
+      className="w-full bg-[#2B2826] lg:bg-[#F7F0EC] text-white lg:text-black"
+      data-testid="work-experience-section"
+    >
       {/* Top border */}
       <div className="border-t border-border-gray-dark border-dashed"></div>
 
       {/* Heading */}
-      <div className={`${isMobile ? 'px-8 pt-8 pb-6' : 'container mx-auto 4k:mx-[12rem] px-8 pt-[7.5rem] pb-[2.75rem]'}`}>
-        <h2 className={`${isMobile ? 'text-3xl' : 'text-7xl'} font-monalista`}>Work Experience</h2>
+      <div
+        className={`${
+          isMobile
+            ? "px-8 pt-8 pb-6"
+            : "container mx-auto 4k:mx-[12rem] px-8 pt-[7.5rem] pb-[2.75rem]"
+        }`}
+      >
+        <h2 className={`${isMobile ? "text-3xl" : "text-7xl"} font-monalista`}>
+          Work Experience
+        </h2>
       </div>
 
       {/* Experience Card */}
@@ -66,7 +88,12 @@ const WorkExperience: React.FC<WorkExperienceProps> = () => {
 
                   {/* Large G Logo */}
                   <div className="flex-grow flex items-center justify-center">
-                    <div className="text-black text-[200px] font-bold">G</div>
+                    <Image
+                      src="/Behaviol.svg"
+                      alt="Profile Image"
+                      width={242}
+                      height={339}
+                    />
                   </div>
 
                   <p className="text-black mt-12">Google</p>
@@ -77,16 +104,18 @@ const WorkExperience: React.FC<WorkExperienceProps> = () => {
               <div className="w-1/2 flex items-center justify-end">
                 <div className="max-w-[40rem]">
                   <h3 className="text-6xl font-monalista mb-4">Work Title</h3>
-                  <p className="text-white lg:text-gray-600 mb-8 text-[2rem] font-light">Jan-2020 - June 2024</p>
+                  <p className="text-white lg:text-gray-600 mb-8 text-[2rem] font-light">
+                    Jan-2020 - June 2024
+                  </p>
 
                   <div className="space-y-6 text-white lg:text-gray-600 leading-relaxed text-justify text-[1.25rem] font-light">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt ut labore et dolore magna
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt ut labore et dolore magna
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
@@ -115,16 +144,25 @@ const WorkExperience: React.FC<WorkExperienceProps> = () => {
             {/* Content Section below */}
             <div className="w-full p-6">
               <h3 className="text-2xl font-monalista mb-2">Work Title</h3>
-              <p className="text-white lg:text-gray-600 mb-4 text-sm font-light">Jan-2020 - June 2024</p>
+              <p className="text-white lg:text-gray-600 mb-4 text-sm font-light">
+                Jan-2020 - June 2024
+              </p>
 
               <div className="space-y-4 text-white lg:text-gray-600 leading-relaxed text-sm font-light mb-4">
                 <p>
-                  Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.
+                  Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed
+                  Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                  Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco
+                  Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Lorem Ipsum
+                  Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod
+                  Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad
+                  Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi
+                  Ut Aliquip Ex Ea Commodo Consequat.
                 </p>
               </div>
-              
+
               {/* Mobile Only Slider Indicator */}
-              <SliderIndicator 
+              <SliderIndicator
                 total={totalSlides}
                 current={currentSlide}
                 onSelect={goToSlide}
