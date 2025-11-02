@@ -1,10 +1,34 @@
+'use client';
+
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const CreativeHeading = () => {
   const gridItems = Array(6).fill(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start center", "end center"]
+  });
+
+  // Move orange box through all 4 lines
+  const orangeY = useTransform(
+    scrollYProgress, 
+    [0, 0.33, 0.66, 1], 
+    ['0%', '130%', '260%', '390%']
+  );
+
+  // Change width based on which line it's on
+  const orangeWidth = useTransform(
+    scrollYProgress,
+    [0, 0.25, 0.33, 0.5, 0.66, 0.83, 1],
+    ['45%', '45%', '70%', '70%', '85%', '85%', '40%'] // Making -> Creative -> Shits Since -> Birth
+  );
 
   return (
-    <section className="relative flex flex-col justify-center items-center overflow-hidden">
+    <section ref={sectionRef} className="relative flex flex-col justify-center items-center overflow-hidden min-h-screen">
       {/* Dotted Grid Background with exactly 6 columns */}
       <div className="absolute inset-0 w-[123.2%] left-[-11.6%] grid grid-cols-6 border-border-gray-dark border-dashed">
         {gridItems.map((_, index) => (
@@ -22,7 +46,7 @@ const CreativeHeading = () => {
 
         {/* Column 2 - Name and Title */}
         <div className="pt-40 flex flex-col items-end text-start">
-          <div className=" lg:block hidden">
+          <div className="lg:block hidden">
             <Image
               src="/recent works/work2_BW.webp"
               alt="Abstract 3D waves"
@@ -33,22 +57,45 @@ const CreativeHeading = () => {
           </div>
         </div>
 
-        {/* Columns 3-4 - Orange Box */}
+        {/* Columns 3-4 - Text with Moving Orange Box */}
         <div className="col-span-2 flex justify-center items-center relative w-full text-center py-[9rem]">
           <div className="w-full flex justify-center items-center relative">
-            <h1 className=" text-[4.6875rem]  lg:text-11xl leading-tight font-monalista">
-              <div className="mb-4">Making</div>
-              <div className="relative inline-block">
-                <div className="absolute top-0 left-[calc(1ch-0.2rem)] h-full w-[13rem] lg:w-[26.25rem] bg-orange-theme" />
-                <span className="relative z-10 text-black">C</span>
-                <span className="relative z-10 text-white">reativ</span>
-                <span className="relative z-10 text-black">e</span>
-              </div>
-              <span className="whitespace-nowrap">
-                <div className="mt-4">Shits Since</div>
-                <div className="mt-4">Birth</div>
-              </span>
-            </h1>
+            <div className="relative">
+              {/* Animated Orange Box with Dynamic Width */}
+              <motion.div 
+                className="absolute h-[6rem] lg:h-[11rem] bg-orange-theme pointer-events-none"
+                style={{
+                  y: orangeY,
+                  width: orangeWidth,
+                  top: '-0.5rem',
+                  left: '50%',
+                  x: '-50%',
+                }}
+                transition={{ type: "tween", ease: "easeInOut" }}
+              />
+
+              <h1 className="text-[4.6875rem] lg:text-11xl leading-tight font-monalista relative">
+                {/* Line 1: Making */}
+                <div className="mb-4 relative mix-blend-difference text-white">
+                  Making
+                </div>
+                
+                {/* Line 2: Creative */}
+                <div className="relative mix-blend-difference text-white">
+                  Creative
+                </div>
+
+                {/* Line 3: Shits Since */}
+                <div className="mt-4 whitespace-nowrap relative mix-blend-difference text-white">
+                  Shits Since
+                </div>
+
+                {/* Line 4: Birth */}
+                <div className="mt-4 relative mix-blend-difference text-white">
+                  Birth
+                </div>
+              </h1>
+            </div>
           </div>
         </div>
 

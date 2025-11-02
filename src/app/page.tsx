@@ -1,3 +1,45 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+
+interface SectionWrapperProps {
+  children: React.ReactNode;
+  id?: string;
+}
+
+export function SectionWrapper({ children, id }: SectionWrapperProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0.8, 1, 1, 0.95]
+  );
+  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, -100]);
+
+  return (
+    <motion.div
+      ref={ref}
+      id={id}
+      style={{
+        opacity,
+        scale,
+        y,
+      }}
+      className="section-wrapper"
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+// Updated Home page component
 import About from "@/components/About";
 import CreativeHeading from "@/components/CreativeHeading";
 import ExpertiseSection from "@/components/ExpertiseSection";
@@ -9,30 +51,39 @@ import RecentWork from "@/components/RecentWork";
 import TextMaskSection from "@/components/TextMaskSection";
 import WorkExperience from "@/components/WorkExperience";
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Your Website Title",
-  description: "Your Website Description",
-  other: {
-    "trustpilot-one-time-domain-verification-id": "056da7dd-a47d-4be3-864c-d2e64163a1ae",
-  },
-};
-
-
 export default function Home() {
   return (
     <main className="">
       <Navbar />
       <Hero />
-      <About />
-      <TextMaskSection />
-      <ExpertiseSection />
-      <ProjectSection />
-      <RecentWork />
-      <CreativeHeading />
-      <WorkExperience />
-      <Footer />
+      <SectionWrapper id="about">
+        <About />
+        <TextMaskSection />
+      </SectionWrapper>
+
+      <SectionWrapper id="expertise">
+        <ExpertiseSection />
+      </SectionWrapper>
+
+      <SectionWrapper id="projects">
+        <ProjectSection />
+      </SectionWrapper>
+
+      <SectionWrapper id="recent-work">
+        <RecentWork />
+      </SectionWrapper>
+
+      <SectionWrapper id="creative-heading">
+        <CreativeHeading />
+      </SectionWrapper>
+
+      <SectionWrapper id="work-experience">
+        <WorkExperience />
+      </SectionWrapper>
+
+      <SectionWrapper id="footer">
+        <Footer />
+      </SectionWrapper>
     </main>
   );
 }
