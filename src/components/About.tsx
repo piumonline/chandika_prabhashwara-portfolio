@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useInView, Variants } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 function About() {
   const headingRef = useRef(null);
@@ -25,19 +25,19 @@ function About() {
   const duplicatedTools = [...tools, ...tools];
 
   // Text reveal animation variants
-  const headingVariants: Variants = {
+  const headingVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.6, 0.05, -0.01, 0.9]
+        ease: [0.6, 0.01, 0.05, 0.95]
       }
     }
   };
 
-  const paragraphVariants: Variants = {
+  const paragraphVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -45,7 +45,7 @@ function About() {
       transition: {
         duration: 0.8,
         delay: 0.2,
-        ease: [0.6, 0.05, -0.01, 0.9]
+        ease: [0.6, 0.01, 0.05, 0.95]
       }
     }
   };
@@ -62,7 +62,7 @@ function About() {
             alt="Profile Image"
             width={542}
             height={639}
-            className=""
+            className="" 
           />
         </div>
 
@@ -70,7 +70,6 @@ function About() {
         <div className="max-w-[37.5rem] mx-[1.5625rem]">
           <motion.h1 
             ref={headingRef}
-            variants={headingVariants}
             initial="hidden"
             animate={isHeadingInView ? "visible" : "hidden"}
             className="text-[2rem] lg:text-7xl font-normal mb-[2.5rem] lg:mb-[4.375rem] font-monalista"
@@ -80,7 +79,6 @@ function About() {
           
           <motion.p 
             ref={paragraphRef}
-            variants={paragraphVariants}
             initial="hidden"
             animate={isParagraphInView ? "visible" : "hidden"}
             className="text-gray-700 leading-relaxed text-justify text-base lg:text-xl font-light"
