@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 
 function About() {
   const headingRef = useRef(null);
@@ -25,19 +25,19 @@ function About() {
   const duplicatedTools = [...tools, ...tools];
 
   // Text reveal animation variants
-  const headingVariants = {
+  const headingVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.6, 0.01, 0.05, 0.95]
+        ease: [0.6, 0.05, -0.01, 0.9]
       }
     }
   };
 
-  const paragraphVariants = {
+  const paragraphVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -45,7 +45,7 @@ function About() {
       transition: {
         duration: 0.8,
         delay: 0.2,
-        ease: [0.6, 0.01, 0.05, 0.95]
+        ease: [0.6, 0.05, -0.01, 0.9]
       }
     }
   };
